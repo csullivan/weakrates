@@ -1,0 +1,21 @@
+F90=gfortran
+F90FLAGS= -O3 -ffree-line-length-none
+MODINC=-I./
+
+#if you want to take advantage of openmp, set OPENMP=1
+OPENMP=0
+
+#utilize the approximate rate routines (=1)
+INCLUDE_APPROX=0
+###### Below this line: only necessary if INCLUDE_APPROX=1
+
+HEMPEL_DIRECTORY=./src/hempel/sfho_frdm_comp/
+
+#You must have a HDF5 version installed with the _same_
+#compiler, this often means compiling it by yourself.
+#The mesasdk (see README), provides a version of gfortran
+#and HDF5 libraries compiled with it than can also be used
+
+HDF5DIR=/projects/ceclub/gr1dnulib/mesasdk
+HDF5INCS=-I$(HDF5DIR)/include
+HDF5LIBS=-L$(HDF5DIR)/lib -lhdf5 -lhdf5_fortran -lhdf5 -lz
