@@ -40,7 +40,7 @@ Electron-Capture Rates on Nuclei:
 
 This library is a new module for estimating microphysical electron-capture rates on nuclei.
 It utilizes the formalism discussed in:
-
+<pre>
 ----[1]-----------------------------------------------------------------------------
 | Sullivan, C., O'Connor, E., Zegers, R. G. T., Grubb, T., & Austin, S. M. (2015). |
 | The Sensitivity of Core-Collapse Supernovae to Nuclear Electron Capture.         |
@@ -48,7 +48,7 @@ It utilizes the formalism discussed in:
 | http://arxiv.org/abs/1508.07348                                                  |
 | Contact: Chris Sullivan <sullivan@nscl.msu.edu>                                  |
 ------------------------------------------------------------------------------------
-
+</pre>
 At it's core, this code is a library of electron-capture rate tables and
 are available as a part of the ratelibrary class (set in the parameters
 file). In addition, number densities (abundances) and nuclear masses
@@ -58,7 +58,7 @@ a variety of weak interaction rates for over 6000 species of nuclei. Emissivitie
 and opcaities for electron capture are provided in a sister code (NuLib), located
 at http://www.nulib.org/. To utilize rates from this work, one must cite the above paper
 as well the following publications from which the utilized weak-rate tables derive:
-
+<pre>
 ----[2]-------------------------------------------------------------------------
 | Fuller, G. M., Fowler, W. A., & Newman, M. J. (1982).                        |
 | Stellar weak interaction rates for intermediate-mass nuclei.                 |
@@ -81,7 +81,7 @@ as well the following publications from which the utilized weak-rate tables deri
 | Physical Review Letters 90, 241102.                                          |
 | http://prl.aps.org/abstract/PRL/v90/i24/e241102                              |
 --------------------------------------------------------------------------------
-
+</pre>
 In addition to the above rate tables, this library employes an approximate routine
 for estimating the electron capture and neutrino energy loss rates for nuclei
 which are not included in the tables, and for density and temperatures outside the
@@ -96,7 +96,7 @@ Evan O'Connor and Christian Ott's and are used in this code via their nuc_eos ro
 These EOS are self consistent with the NSE compositions provided by Matthias Hempel.
 Thus, if the approximate electron capture rate routine is used, in addition to
 references [1] and [3], please also cite:
-
+<pre>
 ----[6]-------------------------------------------------------------------------
 | O'Connor, E., & Ott, C. D. (2010).					       |
 | A new open-source code for spherically symmetric stellar collapse to neutron |
@@ -109,7 +109,7 @@ references [1] and [3], please also cite:
 | The Astrophysical Journal, 70.					       |
 | http://iopscience.iop.org/0004-637X/748/1/70                                 |
 --------------------------------------------------------------------------------
-
+</pre>
 Installation:
 -------------
 1. Clone this repository to your local machine
@@ -152,11 +152,12 @@ Installation:
    provided by M. Hempel if the weak_rates module (electron-capture rates). Primarily
    a public (non-private) copy of the loaded nuclear masses must be exposed. e.g. for
    the SFHo EOS, one must add the following to the source file:
-
+<pre>
    ---------------------------------------------------
    | double precision, dimension(kmax) :: sfho_mass  |
    |---------------------- & ------------------------|
    | sfho_mass = mass                                |
    ---------------------------------------------------
+</pre>
    * Finally, update the path inside the *_composition.f to correctly point to the
    compotion binary.
