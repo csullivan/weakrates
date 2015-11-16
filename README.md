@@ -107,15 +107,15 @@ Thus, if the approximate electron capture rate routine is used, in addition to
 references [1] and [3], please also cite:
 <pre>
 ----[6]-------------------------------------------------------------------------
-| O'Connor, E., & Ott, C. D. (2010).					       |
+| O'Connor, E., & Ott, C. D. (2010).					                            |
 | A new open-source code for spherically symmetric stellar collapse to neutron |
 | stars and black holes.                                                       | 
-| Classical and Quantum Gravity, 27(11), 114103.			       |	    
+| Classical and Quantum Gravity, 27(11), 114103.			                      |	    
 | http://doi.org/10.1088/0264-9381/27/11/114103                                | 
 ----[7]-------------------------------------------------------------------------
-| Hempel, M., & Fischer, T. (2012).				               |
+| Hempel, M., & Fischer, T. (2012).				                                  |
 | New Equations of State in Simulations of Core-collapse Supernovae.           |
-| The Astrophysical Journal, 70.					       |
+| The Astrophysical Journal, 70.					                                  |
 | http://iopscience.iop.org/0004-637X/748/1/70                                 |
 --------------------------------------------------------------------------------
 </pre>
