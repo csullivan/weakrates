@@ -55,7 +55,7 @@ It utilizes the formalism discussed in:
 | The Sensitivity of Core-Collapse Supernovae to Nuclear Electron Capture.         |
 | The Astrophysical Journal (submitted)                                            |
 | http://arxiv.org/abs/1508.07348                                                  |
-| Contact: Chris Sullivan <sullivan@nscl.msu.edu>                                                      |
+| Contact: Chris Sullivan <sullivan@nscl.msu.edu>                                  |
 ------------------------------------------------------------------------------------
 </pre>
 At it's core, this code is a library of electron-capture rate tables and
