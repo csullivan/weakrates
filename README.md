@@ -19,7 +19,8 @@ Maintained permanently by the [NSCL Charge-Exchange group]
 
 Copyright:		    
 ----------
-This weak-rate library is open source, but copyrighted by Chris Sullivan.
+This weak-rate library is open source, but copyrighted by Chris Sullivan 
+and the NSCL Charge-Exchange group.
 The code is released to the community under the
 Creative Commons attribution-noncommercial-share alike license:
 
