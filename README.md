@@ -10,7 +10,7 @@ National Superconducting Cyclotron Laboratory
 Joint Institute for Nuclear Astrophysics:
 Center for the Evolution of the Elements
 
-Maintained permenantly by the [NSCL Charge-Exchange group]
+Maintained permanently by the [NSCL Charge-Exchange group]
 
 [NSCL Charge-Exchange group]: https://groups.nscl.msu.edu/charge_exchange/
 
