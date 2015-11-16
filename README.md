@@ -1,10 +1,12 @@
 A Weak Interaction Rate Library With Interchangable Nuclear Data
-----------
+--
 
 [![DOI](https://zenodo.org/badge/19229/csullivan/weakrates.svg)](https://zenodo.org/badge/latestdoi/19229/csullivan/weakrates)
 
 Author: Chris Sullivan (sullivan@nscl.msu.edu)
+
 National Superconducting Cyclotron Laboratory
+
 Joint Institute for Nuclear Astrophysics:
 Center for the Evolution of the Elements
 
