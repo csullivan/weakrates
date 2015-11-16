@@ -131,7 +131,7 @@ Installation:
 4. An input parameter file 'parameters_template' is located in the top leve directory.
    Rename the file to 'parameters' and set the relevant options here, including the
    absolute paths to the desired rate tables. Rate tables can be downloaded from:
-   [LINK]
+   http://www.jinaweb.org/weakrates
 
  *  That's it! The example executable should have compiled and be ready to use.  *
 
