@@ -1,4 +1,4 @@
-A Weak Interaction Rate Library With Interchangable Nuclear Data
+A weak interaction rate library with interchangable nuclear data 
 --
 
 [![DOI](https://zenodo.org/badge/19229/csullivan/weakrates.svg)](https://zenodo.org/badge/latestdoi/19229/csullivan/weakrates)
