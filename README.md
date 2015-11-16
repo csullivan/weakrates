@@ -169,4 +169,4 @@ Installation:
    ---------------------------------------------------
 </pre>
    * Finally, update the path inside the *_composition.f to correctly point to the
-   compotion binary.
+   composition binary.
