@@ -3,15 +3,17 @@ A Weak Interaction Rate Library With Interchangable Nuclear Data
 
 [![DOI](https://zenodo.org/badge/19229/csullivan/weakrates.svg)](https://zenodo.org/badge/latestdoi/19229/csullivan/weakrates)
 
-Author: Chris Sullivan (sullivan@nscl.msu.edu)
+Author: [Chris Sullivan] (sullivan@nscl.msu.edu)
 
-National Superconducting Cyclotron Laboratory
+[National Superconducting Cyclotron Laboratory]
 
-Joint Institute for Nuclear Astrophysics:
-Center for the Evolution of the Elements
+[Joint Institute for Nuclear Astrophysics: Center for the Evolution of the Elements]
 
 Maintained permanently by the [NSCL Charge-Exchange group]
 
+[Chris Sullivan]: https://people.nscl.msu.edu/~sullivan/
+[National Superconducting Cyclotron Laboratory]: http://nscl.msu.edu/
+[Joint Institute for Nuclear Astrophysics: Center for the Evolution of the Elements]: http://www.jinaweb.org/
 [NSCL Charge-Exchange group]: https://groups.nscl.msu.edu/charge_exchange/
 
 
