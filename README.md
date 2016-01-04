@@ -53,8 +53,8 @@ It utilizes the formalism discussed in:
 ----[1]-----------------------------------------------------------------------------
 | Sullivan, C., O'Connor, E., Zegers, R. G. T., Grubb, T., & Austin, S. M. (2015). |
 | The Sensitivity of Core-Collapse Supernovae to Nuclear Electron Capture.         |
-| The Astrophysical Journal (submitted)                                            |
-| http://arxiv.org/abs/1508.07348                                                  |
+| The Astrophysical Journal, 816, 44.                                              |
+| http://iopscience.iop.org/article/10.3847/0004-637X/816/1/44                     |
 | Contact: Chris Sullivan <sullivan@nscl.msu.edu>                                                         |
 ------------------------------------------------------------------------------------
 </pre>
