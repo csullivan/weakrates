@@ -422,3 +422,32 @@ subroutine findone(lr,lt,y,ff,index)
   ff(:) = ffx(:,1)
 
 end subroutine findone
+
+
+subroutine get_nuc_eos (xrho,xtemp,xye,eos_variables)
+  implicit none
+
+  real*8, intent(in) :: xrho,xtemp,xye
+  real*8, dimension(15), intent(out) :: eos_variables
+  real*8 :: matter_prs,matter_ent,matter_cs2,matter_dedt,matter_dpderho,matter_dpdrhoe
+  real*8 :: precision = 1.0d-10
+  integer :: keytemp,keyerr
+
+  include '../constants.inc'
+  !! EOS stuff
+  keytemp = 1
+  keyerr = 0
+
+  eos_variables = 0.0d0
+  eos_variables(rhoindex) = xrho
+  eos_variables(tempindex) = xtemp
+  eos_variables(yeindex) = xye
+  call nuc_eos_full(eos_variables(rhoindex),eos_variables(tempindex), &
+       eos_variables(yeindex),eos_variables(energyindex),matter_prs, &
+       matter_ent,matter_cs2,matter_dedt,matter_dpderho,matter_dpdrhoe, &
+       eos_variables(xaindex),eos_variables(xhindex),eos_variables(xnindex), &
+       eos_variables(xpindex),eos_variables(abarindex),eos_variables(zbarindex), &
+       eos_variables(mueindex),eos_variables(munindex),eos_variables(mupindex), &
+       eos_variables(muhatindex),keytemp,keyerr,precision)
+
+end subroutine get_nuc_eos

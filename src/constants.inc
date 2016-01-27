@@ -1,4 +1,12 @@
-  !enum	
+  !rate enum
+  integer, parameter :: betaplus = 1
+  integer, parameter :: ecapture = 2
+  integer, parameter :: elossnue = 3  
+  integer, parameter :: betaminus = 4
+  integer, parameter :: poscapture = 5
+  integer, parameter :: elossanue = 6  
+
+  !eos enum	
   integer, parameter :: total_eos_variables = 15
   integer, parameter :: rhoindex =1
   integer, parameter :: tempindex = 2
