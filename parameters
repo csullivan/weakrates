@@ -7,13 +7,17 @@ lmp_rates     		= 	"lmprates.dat"
 lmsh_rates		= 	"lmshrates.dat"
 oda_rates		=	"odarates.dat"
 ffn_rates		=	"ffnrates.dat"
+pruet_rates1		=	"pruet_66_80.dat"
+pruet_rates2		=	"pruet_81_110.dat"
 
 ## Rate table priority hierarchy ##
 ilmp			=	1
 ilmsh			=	2
 ioda			=	3
-iffn			=	0
-iapprox			=	4
+iffn			=	4
+ipruet1			=	5
+ipruet2			=	6
+iapprox			=	7
 
 # 0 indicates the table will not be used
 # 1 indicates highest priority, if other tables have rates for a nuclei contained in this table, they will be ignored.
@@ -34,6 +38,11 @@ iapprox			=	4
 |         | II. Weak rates for nuclei in the mass range in supernovae environments.      |
 |         | Nuclear Physics A, 673(1-4), 481-508.                                        |
 |         | http://doi.org/10.1016/S0375-9474(00)00131-7                                 |
+------------------------------------------------------------------------------------------
+| ipruet1 | Pruet citation, 66-80 and 81-110                                             | 
+| ipruet2 |										 |
+| 	  |										 |
+|	  |										 |
 ------------------------------------------------------------------------------------------
 | ilmsh   | Langanke, K., & Mart\'{i}nez-Pinedo, G. (2003).                              |
 | iapprox | Electron capture rates on nuclei and implications for stellar core collapse. |
