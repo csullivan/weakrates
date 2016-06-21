@@ -439,6 +439,22 @@ contains
        print *, "    |         | II - A = 21 to A = 60. The Astrophysical Journal, 252, 715.                  |"
        print *, "    |         | http://doi.org/10.1086/159597                                                |"
        print *, "    ------------------------------------------------------------------------------------------"       
+    case ("pruet_66_80.dat":"pruet_66_80_leftover.dat")                                                                                                 
+       print *, "    Loading Pruet & Fuller table. Make reference to: "                                                
+       print *, "    ------------------------------------------------------------------------------------------"       
+       print *, "    | ipruet1 | ************., Pruet. A=66 to A=80                                           |"       
+       print *, "    | ipruet2 |                                                                              |"       
+       print *, "    |         |                                                                              |"       
+       print *, "    |         |                                                                              |"       
+       print *, "    ------------------------------------------------------------------------------------------" 
+    case ("pruet_81_110.dat")
+       print *, "    Loading Pruet & Fuller table. Make reference to: "
+       print *, "    ------------------------------------------------------------------------------------------"
+       print *, "    | ipruet2 | ************., Pruet. A=81 to A=110                                          |"
+       print *, "    |         |                                                                              |"
+       print *, "    |         |                                                                              |"
+       print *, "    |         |                                                                              |"
+       print *, "    ------------------------------------------------------------------------------------------"
     case default
        stop "No default"
     end select
