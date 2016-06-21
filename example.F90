@@ -36,10 +36,10 @@ program example
   ! These three methods are detailed below.                                  !
   ! ------------------------------------------------------------------------ !
   
-  A = 56
-  Z = 28  ! Ni56
+  A = 66
+  Z = 26  ! Ni56
   T9 = 10.0d0 ! 10 GK
-  logrhoye = 12.0d0 ! log10(density*ye [g/cm3])
+  logrhoye = 11.0d0 ! log10(density*ye [g/cm3])
   table_index = in_table(weakrate_library,A,Z,logrhoye,T9) ! retrieve table containing rate  
   
   rate = return_weakrate(weakrate_library,A,Z,T9,logrhoye,table_index,ecapture)
