@@ -15,7 +15,7 @@ ifeq ($(INCLUDE_APPROX),1)
 	EXTRAOBJECTS = src/nuc_eos/nuc_eos.a
 	EXTRAINCS += $(HDF5INCS)
 	EXTRAOBJECTS += $(HDF5LIBS)
-	#extra C library dependence
+        #extra C library dependence
 	EXTRACDEPS = ./src/Clibs.a
 	CLIB_SRC = ./src/calc_delta_e.c
 	CLIB_OBJECTS = $(CLIB_SRC:.c=.o)
@@ -24,8 +24,6 @@ ifeq ($(INCLUDE_APPROX),1)
 	MODINC += -I$(HEMPEL_DIRECTORY)
 	DEFS += -DINCLUDE_APPROX
 endif
-
-#DEFS += -DSTANDALONE
 
 
 ifeq ($(OPENMP),1)

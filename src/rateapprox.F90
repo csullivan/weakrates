@@ -151,6 +151,7 @@ contains
   end subroutine print_approx_reference
 !------------------------------------------------------------------------------------!
 end module class_rateapproximation
+#ifdef INCLUDE_APPROX
 !------------------------------------------------------------------------------------!
 function complete_fermi_integral(ifermi,eta)
   implicit none
@@ -215,3 +216,4 @@ function complete_fermi_integral(ifermi,eta)
   return
 end function complete_fermi_integral
 !------------------------------------------------------------------------------------!
+#endif
