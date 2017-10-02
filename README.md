@@ -50,7 +50,7 @@ Electron-Capture Rates on Nuclei:
 This library is a new module for estimating microphysical electron-capture rates on nuclei.
 It utilizes the formalism discussed in:
 <pre>
-----[1]-----------------------------------------------------------------------------
+------------------------------------------------------------------------------------
 | Sullivan, C., O'Connor, E., Zegers, R. G. T., Grubb, T., & Austin, S. M. (2015). |
 | The Sensitivity of Core-Collapse Supernovae to Nuclear Electron Capture.         |
 | The Astrophysical Journal, 816, 44.                                              |
@@ -68,28 +68,40 @@ and opcaities for electron capture are provided in a sister code (NuLib), locate
 at http://www.nulib.org/. To utilize rates from this work, one must cite the above paper
 as well the following publications from which the utilized weak-rate tables derive:
 <pre>
-----[2]-------------------------------------------------------------------------
-| Fuller, G. M., Fowler, W. A., & Newman, M. J. (1982).                        |
-| Stellar weak interaction rates for intermediate-mass nuclei.                 |
-| II - A = 21 to A = 60. The Astrophysical Journal, 252, 715.                  |
-| http://doi.org/10.1086/159597                                                |
-----[3]-------------------------------------------------------------------------
-| Oda, T., Hino, M., Muto, K., Takahara, M., & Sato, K. (1994).                |
-| Rate Tables for the Weak Processes of sd-Shell Nuclei in Stellar Matter.     |
-| Atomic Data and Nuclear Data Tables, 56(2), 231-403.                         |
-| http://doi.org/10.1006/adnd.1994.1007                                        |
-----[4]-------------------------------------------------------------------------
-| Langanke, K., & Mart\'{i}nez-Pinedo, G. (2000).                              |
-| Shell-model calculations of stellar weak interaction rates:                  |
-| II. Weak rates for nuclei in the mass range in supernovae environments.      |
-| Nuclear Physics A, 673(1-4), 481-508.                                        |
-| http://doi.org/10.1016/S0375-9474(00)00131-7                                 |
-----[5]-------------------------------------------------------------------------
-| Langanke, K., & Mart\'{i}nez-Pinedo, G. (2003).                              |
-| Electron capture rates on nuclei and implications for stellar core collapse. |
-| Physical Review Letters 90, 241102.                                          |
-| http://prl.aps.org/abstract/PRL/v90/i24/e241102                              |
---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+| Langanke, K., & Mart\'{i}nez-Pinedo, G. (2000).                                        |
+| Shell-model calculations of stellar weak interaction rates:                            |
+| II. Weak rates for nuclei in the mass range in supernovae environments.                |
+| Nuclear Physics A, 673(1-4), 481-508.                                                  |
+| http://doi.org/10.1016/S0375-9474(00)00131-7                                           |
+------------------------------------------------------------------------------------------
+| Langanke, K., & Mart\'{i}nez-Pinedo, G. (2003).                                        |
+| Electron capture rates on nuclei and implications for stellar core collapse.           |
+| Physical Review Letters 90, 241102.                                                    |
+| http://prl.aps.org/abstract/PRL/v90/i24/e241102                                        |
+------------------------------------------------------------------------------------------
+| Oda, T., Hino, M., Muto, K., Takahara, M., & Sato, K. (1994).                          |
+| Rate Tables for the Weak Processes of sd-Shell Nuclei in Stellar Matter.               |
+| Atomic Data and Nuclear Data Tables, 56(2), 231-403.                                   |
+| http://doi.org/10.1006/adnd.1994.1007                                                  |
+------------------------------------------------------------------------------------------
+| Fuller, G. M., Fowler, W. A., & Newman, M. J. (1982).                                  |
+| Stellar weak interaction rates for intermediate-mass nuclei.                           |
+| II - A = 21 to A = 60. The Astrophysical Journal, 252, 715.                            |
+| http://doi.org/10.1086/159597                                                          |
+------------------------------------------------------------------------------------------
+| Pruet, J. & Fuller, G. M. (2003)                                                       |
+| Estimates of Stellar Weak Interaction Rates for Nuclei in the Mass Range               |
+| A = 65 - 80. The Astrophysical Journal, 149, 1.                                        |
+| http://dx.doi.org/10.1086/376753                                                       |
+| And private communication		                                                         |
+------------------------------------------------------------------------------------------
+| Toshio Suzuki, Hiroshi Toki and Ken'ichi Nomoto (2016).                                |
+| ELECTRON-CAPTURE AND beta-DECAY RATES FOR sd-SHELL NUCLEI IN STELLAR ENVIRONMENTS      |
+| RELEVANT TO HIGH-DENSITY O–NE–MG CORES. The Astrophysical Journal, 817, 163            |
+| https://doi.org/10.3847/0004-637x/817/2/163                                            |
+------------------------------------------------------------------------------------------
+
 </pre>
 In addition to the above rate tables, this library employes an approximate routine
 for estimating the electron capture and neutrino energy loss rates for nuclei
@@ -106,13 +118,13 @@ These EOS are self consistent with the NSE compositions provided by Matthias Hem
 Thus, if the approximate electron capture rate routine is used, in addition to
 references [1] and [3], please also cite:
 <pre>
-----[6]-------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 | O'Connor, E., & Ott, C. D. (2010).                                           |
 | A new open-source code for spherically symmetric stellar collapse to neutron |
 | stars and black holes.                                                       | 
-| Classical and Quantum Gravity, 27(11), 114103.                               |	    
+| Classical and Quantum Gravity, 27(11), 114103.                               |	
 | http://doi.org/10.1088/0264-9381/27/11/114103                                | 
-----[7]-------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 | Hempel, M., & Fischer, T. (2012).                                            |
 | New Equations of State in Simulations of Core-collapse Supernovae.           |
 | The Astrophysical Journal, 70.                                               |

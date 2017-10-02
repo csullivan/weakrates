@@ -3,7 +3,7 @@ module class_rateapproximation
 
   implicit none
   private
-  public :: RateApprox, new_RateApprox, return_hempel_qec, weakrates_approx, print_approx_reference
+  public :: RateApprox, new_RateApprox, return_hempel_qec, weakrates_approx, weakrates_approx_raduta, print_approx_reference
 
   ! constructor declaration
   interface new_RateApprox
@@ -76,6 +76,37 @@ contains
 
   end function return_hempel_qec
 
+!------------------------------------------------------------------
+  function weakrates_approx_raduta(n,temperature,q_gs,mue,rho,A,Z,model) result(rate)
+
+    integer, intent(in) :: n ! 0 for electron capture rate, 1 for nuetrino energy loss rate
+    real*8 :: rate
+    real*8 :: temperature
+    real*8 :: chi
+    real*8 :: eta
+    real*8 :: q_gs
+    real*8 :: mue
+    real*8 :: rho
+    real*8 :: delta_E
+    integer, intent(in) :: A
+    integer, intent(in) :: Z
+    integer, intent(in) :: model
+    real*8 :: complete_fermi_integral
+    real*8 :: get_delta_e_raduta
+    include 'constants.inc'
+
+    delta_E = get_delta_e_raduta(temperature, rho, A, Z, model)
+    chi = (q_gs-delta_E)/temperature
+    eta = mue/temperature + chi
+
+    rate = log(2.0d0)*4.6d0/6146.0d0*(temperature**(5.0d0+n)/m_e**(5.0d0))*&
+         (complete_fermi_integral(4+n,eta) - &
+         2.0d0*chi*complete_fermi_integral(3+n,eta) + &
+         chi**2.0d0*complete_fermi_integral(2+n,eta))
+
+    return
+
+  end function weakrates_approx_raduta
 !------------------------------------------------------------------------------------!
 
   function weakrates_approx(n,temperature,q_gs,mue) result(rate)
@@ -101,9 +132,7 @@ contains
     return
 
   end function weakrates_approx
-  
-!------------------------------------------------------------------------------------!
-
+  !------------------------------------------------------------------------------------!
   subroutine print_approx_reference
     !$OMP SINGLE
     print *, "    Loading approximation. Make reference to: "
@@ -112,6 +141,11 @@ contains
     print *, "    |         | Electron capture rates on nuclei and implications for stellar core collapse. |"
     print *, "    |         | Physical Review Letters 90, 241102.                                          |"
     print *, "    |         | http://prl.aps.org/abstract/PRL/v90/i24/e241102                              |"
+    print *, "    ------------------------------------------------------------------------------------------"
+    print *, "    | Ad. R. Raduta (2017)                                                                   |"
+    print *, "    | Stellar electron capture rates on neutron-rich nuclei and their impact on              |"
+    print *, "    | stellar core collapse. Physical Review C, 95, 025805.                                  |"
+    print *, "    | https://journals.aps.org/prc/abstract/10.1103/PhysRevC.95.025805                       |"
     print *, "    ------------------------------------------------------------------------------------------"
     !$OMP END SINGLE
   end subroutine print_approx_reference

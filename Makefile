@@ -15,6 +15,10 @@ ifeq ($(INCLUDE_APPROX),1)
 	EXTRAOBJECTS = src/nuc_eos/nuc_eos.a
 	EXTRAINCS += $(HDF5INCS)
 	EXTRAOBJECTS += $(HDF5LIBS)
+	#extra C library dependence
+	EXTRACDEPS = ./src/Clibs.a
+	CLIB_SRC = ./src/calc_delta_e.c
+	CLIB_OBJECTS = $(CLIB_SRC:.c=.o)
 	F_SOURCES = $(HEMPEL_DIRECTORY)sfho_frdm_composition_module.f
 	F_OBJECTS=$(F_SOURCES:.f=.o )
 	MODINC += -I$(HEMPEL_DIRECTORY)
@@ -37,10 +41,10 @@ ARCHIVE=weakrates.a
 
 all: src/nuc_eos/nuc_eos.a weakrates.a example
 
-example:  $(EXTRADEPS) $(F_OBJECTS) $(OBJECTS) example.F90
-	$(F90) $(F90FLAGS) $(DEFS) $(MODINC) $(EXTRAINCS) -o $@ example.F90 $(OBJECTS) $(F_OBJECTS) $(EXTRAOBJECTS)
+example:  $(EXTRADEPS) $(EXTRACDEPS) $(F_OBJECTS) $(OBJECTS) example.F90
+	$(F90) $(F90FLAGS) $(DEFS) $(MODINC) $(EXTRAINCS) -o $@ example.F90 $(OBJECTS) $(F_OBJECTS) $(EXTRAOBJECTS) $(EXTRACDEPS)
 
-weakrates.a: $(EXTRADEPS) $(F_OBJECTS) $(OBJECTS) $(NT_OBJECTS)
+weakrates.a: $(EXTRADEPS) $(F_OBJECTS) $(OBJECTS) $(NT_OBJECTS) $(CLIB_OBJECTS)
 	ar -r src/weakrates.a src/*.o
 
 $(OBJECTS): %.o: %.F90 $(EXTRADEPS)
@@ -51,6 +55,12 @@ $(F_OBJECTS): %.o: %.f
 
 src/nuc_eos/nuc_eos.a: src/nuc_eos/*.F90 src/nuc_eos/*.f
 	$(MAKE) -C src/nuc_eos
+
+src/Clibs.a: $(CLIB_OBJECTS)
+	ar -rvs ./src/Clibs.a $(CLIB_OBJECTS)
+$(CLIB_OBJECTS): %.o: %.c
+	gcc $(CFLAGS) -c $< -o $@
+
 
 clean:
 	rm -rf example

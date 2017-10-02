@@ -64,7 +64,7 @@ program example
   echempot_mev = eos_variables(mueindex)
   qvalue_mev = return_hempel_qec(A,Z,Z-1) ! Get Q-value of Ni56 (MeV)
   
-  rate = return_weakrate(ecapture,temp_mev,qvalue_mev,echempot_mev)
+  rate = return_weakrate(ecapture-2,temp_mev,qvalue_mev,echempot_mev,density_gcm3,A,Z,3)
   print *, "return_weakrate_from_approx: ",log10(rate)
 
   ! The above function (interface) call uses the return_weakrate_from_approx function
