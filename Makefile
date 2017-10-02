@@ -25,6 +25,8 @@ ifeq ($(INCLUDE_APPROX),1)
 	DEFS += -DINCLUDE_APPROX
 endif
 
+#DEFS += -DSTANDALONE
+
 
 ifeq ($(OPENMP),1)
 ifeq ($(F90),gfortran)

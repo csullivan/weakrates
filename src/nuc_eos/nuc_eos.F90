@@ -434,6 +434,7 @@ subroutine get_nuc_eos (xrho,xtemp,xye,eos_variables)
   integer :: keytemp,keyerr
 
   include '../constants.inc'
+  include '../enums.inc'
   !! EOS stuff
   keytemp = 1
   keyerr = 0

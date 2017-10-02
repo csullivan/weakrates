@@ -21,6 +21,7 @@ program example
 
   ! enums and physical constants
   include 'src/constants.inc'
+  include 'src/enums.inc'
   double precision :: eos_variables(total_eos_variables)
   
   ! Initialization 

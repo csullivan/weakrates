@@ -49,6 +49,7 @@ contains
     
     implicit none
     include 'constants.inc'
+    include 'enums.inc'
     !inputs and outputs
     integer, intent(in) :: number_nuclei
     integer, intent(in), dimension(number_nuclei) :: nuclei_A
