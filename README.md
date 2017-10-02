@@ -94,7 +94,7 @@ as well the following publications from which the utilized weak-rate tables deri
 | Estimates of Stellar Weak Interaction Rates for Nuclei in the Mass Range               |
 | A = 65 - 80. The Astrophysical Journal, 149, 1.                                        |
 | http://dx.doi.org/10.1086/376753                                                       |
-| And private communication		                                                         |
+| And private communication		                                                 |
 ------------------------------------------------------------------------------------------
 | Toshio Suzuki, Hiroshi Toki and Ken'ichi Nomoto (2016).                                |
 | ELECTRON-CAPTURE AND beta-DECAY RATES FOR sd-SHELL NUCLEI IN STELLAR ENVIRONMENTS      |
